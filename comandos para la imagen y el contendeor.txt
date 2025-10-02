@@ -1,0 +1,5 @@
+//creamos la imagen
+docker build -t imagen-mvc-php .
+
+//creamos el contenedor
+docker run -d --name mvc-contenedor-server -p 8080:80 -v .:/var/www/html imagen-mvc-php
